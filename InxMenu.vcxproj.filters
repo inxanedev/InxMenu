@@ -24,7 +24,7 @@
     <ClInclude Include="src\menu\InxMenu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="EasyString.h">
+    <ClInclude Include="ext\EasyString.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ext\ImGui DirectX 11 Kiero Hook\includes.h">

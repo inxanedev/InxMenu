@@ -1,5 +1,5 @@
 #include "PatternScanner.h"
-#include "../../EasyString.h"
+#include "../../ext/EasyString.h"
 
 uintptr_t PatternScanner::ScanSignature(std::vector<int> signature)
 {
