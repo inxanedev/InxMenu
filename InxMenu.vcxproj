@@ -171,7 +171,7 @@
     <ClInclude Include="src\patching\PatternScanner.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="src\dllmain.cpp" />
     <ClCompile Include="ext\ImGui DirectX 11 Kiero Hook\imgui\imgui.cpp" />
     <ClCompile Include="ext\ImGui DirectX 11 Kiero Hook\imgui\imgui_demo.cpp" />
     <ClCompile Include="ext\ImGui DirectX 11 Kiero Hook\imgui\imgui_draw.cpp" />
