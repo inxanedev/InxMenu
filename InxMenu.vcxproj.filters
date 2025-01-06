@@ -21,9 +21,6 @@
     <ClInclude Include="src\ProcessInfo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\menu\InxMenu.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="ext\EasyString.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -105,9 +102,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\ProcessInfo.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\menu\InxMenu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ext\ImGui DirectX 11 Kiero Hook\kiero\minhook\src\hde\hde32.c">
