@@ -164,6 +164,8 @@
     <ClInclude Include="ext\ImGui DirectX 11 Kiero Hook\kiero\minhook\src\trampoline.h" />
     <ClInclude Include="ext\safetyhook.hpp" />
     <ClInclude Include="ext\Zydis.h" />
+    <ClInclude Include="src\offsets\Offset.h" />
+    <ClInclude Include="src\offsets\Offsets.h" />
     <ClInclude Include="src\patching\Patch.h" />
     <ClInclude Include="src\patching\Patches.h" />
     <ClInclude Include="src\gui\gui.h" />

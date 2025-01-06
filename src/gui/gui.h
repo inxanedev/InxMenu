@@ -7,5 +7,9 @@ public:
 	bool m_is_open;
 	void Render();
 
+	bool m_initialized_offsets = false;
+
 	PatternScanner m_scanner;
+
+	void InitializeOffsets();
 };

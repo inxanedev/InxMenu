@@ -4,6 +4,7 @@
 #include "patching/PatternScanner.h"
 #include <iostream>
 #include "../ext/safetyhook.hpp"
+#include "offsets/Offsets.h"
 
 extern LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
@@ -96,6 +97,19 @@ DWORD WINAPI MainThread(LPVOID lpReserved)
 	freopen_s(&dummy, "CONOUT$", "w", stdout);
 
 	ProcessInfo info;
+	PatternScanner scanner(info);
+
+	uintptr_t pData_GameManager = scanner.ScanSignature(scanner.GenerateSignatureFromString("f8 48 8b 07 41 b0 01"));
+	
+	auto gamemanager_hook = safetyhook::create_mid(pData_GameManager + 1, [](safetyhook::Context& ctx) {
+		pBase_GameManager = ctx.rdi;
+	});
+
+	std::this_thread::sleep_for(std::chrono::seconds(1));
+	
+	Offsets::Initialize();
+	gui.InitializeOffsets();
+
 	bool init_hook = false;
 	do
 	{

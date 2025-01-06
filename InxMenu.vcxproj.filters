@@ -93,6 +93,12 @@
     <ClInclude Include="ext\Zydis.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\offsets\Offsets.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\offsets\Offset.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\dllmain.cpp">

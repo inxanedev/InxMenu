@@ -1,9 +1,16 @@
 #include "gui.h"
 #include "../../ext/ImGui DirectX 11 Kiero Hook/imgui/imgui.h"
 #include "../patching/Patches.h"
+#include "../offsets/Offsets.h"
 
 bool infinite_ammo = false;
 bool no_grenade_delay = false;
+bool god_mode = false;
+
+void GUI::InitializeOffsets()
+{
+	god_mode = Offsets::m_god_mode->m_original;
+}
 
 void GUI::Render()
 {
@@ -14,6 +21,12 @@ void GUI::Render()
 	}*/
 
 	if (ImGui::BeginTabBar("##main")) {
+		if (ImGui::BeginTabItem("Player")) {
+			if (ImGui::Checkbox("God Mode", &god_mode)) {
+				Offsets::m_god_mode->SetValue(god_mode);
+			}
+			ImGui::EndTabItem();
+		}
 		if (ImGui::BeginTabItem("Weapon")) {
 			if (ImGui::Checkbox("Infinite Ammo", &infinite_ammo)) {
 				Patches::m_infinite_ammo_patch.Toggle();
@@ -27,3 +40,4 @@ void GUI::Render()
 
 	ImGui::End();
 }
+
