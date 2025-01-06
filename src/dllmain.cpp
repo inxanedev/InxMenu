@@ -1,10 +1,9 @@
 #include <Windows.h>
-#include "src/menu/InxMenu.h"
-#include "ext/ImGui DirectX 11 Kiero Hook/includes.h"
-#include "src/gui/gui.h"
-#include "src/patching/PatternScanner.h"
+#include "../ext/ImGui DirectX 11 Kiero Hook/includes.h"
+#include "gui/gui.h"
+#include "patching/PatternScanner.h"
 #include <iostream>
-#include "ext/safetyhook.hpp"
+#include "../ext/safetyhook.hpp"
 
 extern LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
